@@ -122,8 +122,8 @@ const options = {
     <tr>
         <td align="center"><a href="https://github.com/ArugaZ" target="_blank"><img src="https://avatars.githubusercontent.com/u/53950128?v=4" width="100px;" alt=""/></a><br />
 <sub><b>ArugaZ</b></sub><br /></td>
-        <td align="center"><a href="https://github.com/MfarelS" target="_blank"><img src="https://avatars.githubusercontent.com/u/58540890?v=4" width="100px;" alt=""/></a><br />
-<sub><b>MfarelS</b></sub><br /></td>
+        <td align="center"><a href="https://github.com/MFarelS" target="_blank"><img src="https://avatars.githubusercontent.com/u/58540890?v=4" width="100px;" alt=""/></a><br />
+<sub><b>MFarelS</b></sub><br /></td>
         <td align="center"><a href="https://github.com/beniismael" target="_blank"><img src="https://avatars.githubusercontent.com/u/74507319?v=4" width="100px;" alt=""/></a><br />
 <sub><b>beniismael</b></sub><br /></td>
         <td align="center"><a href="https://github.com/Nurutomo" target="_blank"><img src="https://avatars.githubusercontent.com/u/18616827?v=4" width="100px;" alt=""/></a><br />
