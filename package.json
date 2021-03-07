@@ -1,5 +1,5 @@
 {
-  "name": "whatsapp-bot-sticker-creator",
+  "name": "whatsapp-bot",
   "version": "10.0.0",
   "description": "Whatsapp Bot - sticker creator",
   "main": "index.js",
@@ -41,8 +41,6 @@
     "os-name": "^4.0.0",
     "puppeteer": "^5.5.0",
     "remove.bg": "^1.3.0",
-    "require-from-web": "^1.2.0",
-    "scathach-api": "0.0.7",
     "sharp": "^0.27.2",
     "simple-youtube-api": "^5.2.1",
     "update-json-file": "^1.1.1",
