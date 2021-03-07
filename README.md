@@ -1,5 +1,5 @@
 <p align="center">
-<img height="40px;" src="https://img.shields.io/badge/❤️Maintened-idk-red.svg?style=flat-square"/>
+<img height="40px;" src="https://img.shields.io/badge/Beta%20Test-✅-blue.svg?style=flat-square"/>
 </p>
 
 <h1 align="center">WhatsApp Bot</h1>
@@ -32,6 +32,7 @@ Clone This Project
 Install the dependencies:
 ```bash
 > npm install
+> npm update
 ```
 ## Usage
 1. Run the WhatsApp Bot
@@ -53,6 +54,7 @@ const options = {
     useChrome: true,
     killProcessOnBrowserClose: true,
     throwErrorOnTosBlock: false,
+    stickerServerEndpoint: false,
     chromiumArgs: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -81,6 +83,7 @@ const options = {
     executablePath: "/usr/bin/google-chrome-stable",
     killProcessOnBrowserClose: true,
     throwErrorOnTosBlock: false,
+    stickerServerEndpoint: false,
     chromiumArgs: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -110,39 +113,15 @@ const options = {
     <tr>
     <td align="center"><a href="https://github.com/YogaSakti" target="_blank"><img src="https://avatars.githubusercontent.com/u/24309806?v=4" width="100px;" alt=""/></a><br />
 <sub><b>YogaSakti</b></sub><br /></td>
-    <td align="center"><a href="https://github.com/ItzNgga" target="_blank"><img src="https://avatars.githubusercontent.com/u/29621457?v=4" width="100px;" alt=""/></a><br />
-<sub><b>ItzNgga</b></sub><br /></td>
-    <td align="center"><a href="https://github.com/TobyG74" target="_blank"><img src="https://avatars.githubusercontent.com/u/32604979?v=4" width="100px;" alt=""/></a><br />
-<sub><b>TobyG74</b></sub><br /></td>
-    <td align="center"><a href="https://github.com/MhankBarBar" target="_blank"><img src="https://avatars.githubusercontent.com/u/55822959?v=4" width="100px;" alt=""/></a><br />
-<sub><b>MhankBarBar</b></sub><br /></td>
     </tr>
 </table>
-<table>
-    <tr>
-        <td align="center"><a href="https://github.com/ArugaZ" target="_blank"><img src="https://avatars.githubusercontent.com/u/53950128?v=4" width="100px;" alt=""/></a><br />
-<sub><b>ArugaZ</b></sub><br /></td>
-        <td align="center"><a href="https://github.com/MFarelS" target="_blank"><img src="https://avatars.githubusercontent.com/u/58540890?v=4" width="100px;" alt=""/></a><br />
-<sub><b>MFarelS</b></sub><br /></td>
-        <td align="center"><a href="https://github.com/beniismael" target="_blank"><img src="https://avatars.githubusercontent.com/u/74507319?v=4" width="100px;" alt=""/></a><br />
-<sub><b>beniismael</b></sub><br /></td>
-        <td align="center"><a href="https://github.com/Nurutomo" target="_blank"><img src="https://avatars.githubusercontent.com/u/18616827?v=4" width="100px;" alt=""/></a><br />
-<sub><b>Nurutomo</b></sub><br /></td>
-    </tr>
-</table>
-And Others
 
 ## Rest API
 All Rest API that used in this project.<br />
 Don't forget to support them.
-- [JoJo API](https://docs-jojo.herokuapp.com)
-- [Melodicxt API](https://api-melodicxt-2.herokuapp.com)
-- [Zeks API](https://api.zeks.xyz)
-- [Tobz API](https://tobz-api.herokuapp.com)
 - [Terhambar.com](https://scrap.terhambar.com)
 - [CF's API](https://api.computerfreaker.cf)
 - [Jikan.moe](https://api.jikan.moe)
-- [ArugaZ](https://api.arugaz.my.id/api)
 
 ## Main Library
 - [wa-automate-nodejs](https://github.com/open-wa/wa-automate-nodejs)

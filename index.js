@@ -67,6 +67,7 @@ const options = {
     executablePath: "/usr/bin/google-chrome-stable",
     killProcessOnBrowserClose: true,
     throwErrorOnTosBlock: false,
+    stickerServerEndpoint: false,
     chromiumArgs: [
         '--no-sandbox',
         '--disable-setuid-sandbox',

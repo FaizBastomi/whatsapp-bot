@@ -2,7 +2,6 @@ const fetch = require('node-fetch')
 const FormData = require('form-data')
 const fs = require('fs')
 const { fromBuffer } = require('file-type')
-const resizeImage = require('./imageProcessing')
 
 /**
  *Fetch Json from Url
@@ -72,8 +71,7 @@ const uploadImages = (buffData, type) => {
     return new Promise(async (resolve, reject) => {
         const { ext } = await fromBuffer(buffData)
         const filePath = 'utils/tmp.' + ext
-        const _buffData = type ? await resizeImage(buffData, false) : buffData
-        fs.writeFile(filePath, _buffData, { encoding: 'base64' }, (err) => {
+        fs.writeFile(filePath, buffData, { encoding: 'base64' }, (err) => {
             if (err) return reject(err)
             console.log('Uploading image to telegra.ph server...')
             const fileData = fs.readFileSync(filePath)

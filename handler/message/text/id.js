@@ -140,19 +140,9 @@ _*${prefix}wiki*_ = Wikipedia
 _*${prefix}tts*_ = Text to Speech Google Translate
     Contoh; ${prefix}tts id halo
 
-_*${prefix}cnnindo*_ = Ambil Data Berita Terkini Dari CNN Kanal Indonesia
-
-_*${prefix}cnnworld*_ = Ambil Data Berita Terkini Dari CNN Kanal Dunia
-
-_*${prefix}cnndetail*_ = Ambil Isi Body Dari Link Berita CNN Yang Anda Berikan
-
-_*${prefix}randomquotes*_ = Random Quotes
-
 _*${prefix}meme*_ = Get Random Meme From Subreddit
 
 _*${prefix}getses*_ = Ambil SS dari Sesi Saat Ini
-
-_*${prefix}pakboi*_ = Ambil Pantun Random Pakboi
 
 _*${prefix}sadboi*_ = Ambil Random Quotes Sadboi
 
@@ -168,21 +158,11 @@ _*${prefix}github*_ = Cek Informasi Tentang User atau Repositories GitHub
 
 _*${prefix}math*_ = Menyelesaikan soal matematika yang diberikan
 
-_*${prefix}googleimg*_ = Mencari Gambar Dari Google
-
-_*${prefix}heroml*_ = Cek Detail Info Hero ML
-
-_*${prefix}tahta*_ = Harta Tahta`
+_*${prefix}googleimg*_ = Mencari Gambar Dari Google`
 }
 
 exports.Wibu = (prefix) => {
     return `_*Wibu Area Menu:*_
-
-_*${prefix}aniquote*_ = Random Quote From Anime
-
-_*${prefix}waifu*_ = Random Waifu
-
-_*${prefix}husbu*_ = Random Husbu
     
 _*${prefix}hentai*_ = Random Hentai
         
@@ -192,55 +172,11 @@ _*${prefix}randomanime*_ = Random Anime Image
 
 _*${prefix}neko*_ = Random Neko
 
-_*${prefix}neko2*_ = Random Neko2
-
 _*${prefix}anime*_ = Cari Anime Berdasarkan Query
 
 _*${prefix}chara*_ = Mencari Chara Berdasarkan Query
 
 _*${prefix}manga*_ = Mencari Informasi Manga Berdasarkan Query`
-}
-
-exports.TextPro = (prefix) => {
-    return `_*TextPro Menu:*_
-    
-_*${prefix}pornhub*_ = Bikin Text Pornhub
-
-_*${prefix}blackpink*_ = Bikin Text Blackpink
-
-_*${prefix}glitch*_ = Bikin Text Glitch
-
-_*${prefix}neonlight*_ = Bikin Text Neon
-
-_*${prefix}neontext*_ = Bikin Text Neon
-
-_*${prefix}thunder*_ = Bikin Text Thunder
-
-_*${prefix}3dtext*_ = Bikin 3D Text
-
-_*${prefix}marvel*_ = Bikin Text Marvel
-
-_*${prefix}sky*_ = Bikin Text Awan
-
-_*${prefix}glow*_ = Bikin Advanced Glow Text
-
-_*${prefix}ballon*_ = Bikin Text Foil Ballon
-
-_*${prefix}matrix*_ = Bikin Text Matrix
-
-_*${prefix}sand*_ = Bikin Text di Pasir
-
-_*${prefix}sand1*_ = Bikin Text di Pasir
-
-_*${prefix}glue3d*_ = Bikin Text 3D Glue
-
-_*${prefix}luxury*_ = Bikin Text Luxury
-
-_*${prefix}nulis*_ = Nulis dibuku
-    Contoh; ${prefix}nulis hai
-
-_*${prefix}nulis2*_ = Nulis dibuku2
-    Contoh; ${prefix}nulis hai`
 }
 
 exports.funMenu = (prefix) => {
