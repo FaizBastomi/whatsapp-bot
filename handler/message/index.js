@@ -541,9 +541,11 @@ module.exports = msgHandler = async (client, message) => {
             if (!args.length) return client.reply(from, 'Harap masukan judul video!', id)
             try {
                 const input = args.join(" ")
-                const filter1 = await ytsr.getFilters(input)
-                const filters1 = filter1.get('Type').get('Video')
-                const { items } = await ytsr(filters1.url, { limit: 10 })
+                const fil = await ytsr.getFilters(input)
+                const fil1 = fil.get('Type').get('Video')
+                const fil2 = await ytsr.getFilters(fil1.url)
+                const fil3 = fil2.get("Duration").get("Short (< 4 minutes)")
+                const { items } = await ytsr(fil3.url, { limit: 10 })
 
                 let hehe = `*YOUTUBE SEARCH*\n\n*Search Query:* ${input}\n`
                 for (let i = 0; i < items.length; i++) {
@@ -553,19 +555,6 @@ module.exports = msgHandler = async (client, message) => {
             } catch(e) {
                 client.reply(from, 'Didn\'t find anything or there is any error!', id)
                 client.sendText(ownerNumber, `Error: ${e.message}`)
-            }
-            break
-            case 'nhder':
-                if (!args.length) return client.reply(from, `Tidak ada kode nuklir, contoh ${prefix}nhder 150306`, id)
-            try {
-                const input = args[0]
-                const dwnh = `http://nhder.herokuapp.com/download/nhentai/${input}/zip`
-                const nhlink = await urlShortener(dwnh)
-                console.log('Shortlink: ' + nhlink)
-                client.reply(from, `*NHENTAI DOWNLOADER*\n\`\`\`Silahkan klik link dibawah\`\`\`\n\n*Link:* ${nhlink}`, id)
-            } catch(e) {
-                console.error(e)
-                client.reply(from, `Error: ${e.message}`, id)
             }
             break
         // Other Command
