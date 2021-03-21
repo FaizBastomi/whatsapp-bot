@@ -49,9 +49,7 @@ _*${prefix}clearall*_ = Hapus Semua Chat
 
 _*${prefix}readall*_ = Baca Semua Pesan
     
-_*${prefix}ban*_ = Blokir Pengguna Dari Memakai Bot
-
-_*${prefix}setinfo*_ = Ganti Info Bot`
+_*${prefix}ban*_ = Blokir Pengguna Dari Memakai Bot`
 }
 
 exports.Sticker = (prefix) => {

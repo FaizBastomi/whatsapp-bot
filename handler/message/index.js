@@ -1017,16 +1017,6 @@ Url: ${res.url}`
             }
             break
         // Owner Bot Only
-        case 'always':
-            if (!isOwner) return client.reply(from, mess.owner, id)
-            if (args[0] === 'on') {
-                client.setPresence(true)
-                client.reply(from, 'Aktif', id)
-            } else if(args[0] === 'off'){
-                client.setPresence(false)
-                client.reply(from, 'Nonaktif', id)
-            }
-            break
             case 'clearall':{
                 if (!isOwner) return client.reply(from, mess.owner, id)
                 const allChats = await client.getAllChatIds()
@@ -1115,10 +1105,6 @@ Url: ${res.url}`
         client.reply(from, `Sukses membaca seluruh pesan dari ${allChat.length} kontak`, id)
     }
     break
-    case 'setinfo':
-        if (!isOwner) return client.reply(from, mess.owner, id)
-        await client.setMyStatus(args.join(" "))
-        break
         case 'ban':
             if (!isOwner) return client.reply(from, mess.owner, id)
             if (quotedMsg) {
