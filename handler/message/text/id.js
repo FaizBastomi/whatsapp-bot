@@ -120,10 +120,7 @@ _*${prefix}ytmp4*_ = Mengunduh Video Dari Link YouTube Yang Diberikan
 
 _*${prefix}pins*_ = Mengunduh Gambar Dari Pinterest
 
-_*${prefix}ytsch*_ = Mencari Video YouTube Berdasarkan Query
-
-_*${prefix}nhder*_ = Nhentai Downloader
-    Contoh; ${prefix}nhder 150306`
+_*${prefix}ytsch*_ = Mencari Video YouTube Berdasarkan Query`
 }
 
 exports.Other = (prefix) => {
