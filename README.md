@@ -43,35 +43,8 @@ const options = {
     headless: true,
     qrTimeout: 0,
     authTimeout: 0,
-    restartOnCrash: start,
-    cacheEnabled: false,
-    useChrome: true,
-    killProcessOnBrowserClose: true,
-    throwErrorOnTosBlock: false,
-    stickerServerEndpoint: false,
-    chromiumArgs: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--aggressive-cache-discard',
-        '--disable-cache',
-        '--disable-application-cache',
-        '--disable-offline-load-stale-cache',
-        '--disk-cache-size=0',
-        '--disable-extensions',
-        '--disable-gl-extensions',
-        '--disable-extensions-https-throttling',
-        '--disable-extensions-file-access-check'
-    ]
-}
-```
-
-### Linux
-```js
-const options = {
-    sessionId: 'bot',
-    headless: true,
-    qrTimeout: 0,
-    authTimeout: 0,
+    cachedPatch: true,
+    disableSpins: true,
     restartOnCrash: start,
     cacheEnabled: false,
     executablePath: "/usr/bin/google-chrome-stable",
@@ -85,11 +58,34 @@ const options = {
         '--disable-cache',
         '--disable-application-cache',
         '--disable-offline-load-stale-cache',
-        '--disk-cache-size=0',
-        '--disable-extensions',
-        '--disable-gl-extensions',
-        '--disable-extensions-https-throttling',
-        '--disable-extensions-file-access-check'
+        '--disk-cache-size=0'
+    ]
+}
+```
+
+### Linux
+```js
+const options = {
+    sessionId: 'bot',
+    headless: true,
+    qrTimeout: 0,
+    authTimeout: 0,
+    cachedPatch: true,
+    disableSpins: true,
+    restartOnCrash: start,
+    cacheEnabled: false,
+    executablePath: "/usr/bin/google-chrome-stable",
+    killProcessOnBrowserClose: true,
+    throwErrorOnTosBlock: false,
+    stickerServerEndpoint: false,
+    chromiumArgs: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--aggressive-cache-discard',
+        '--disable-cache',
+        '--disable-application-cache',
+        '--disable-offline-load-stale-cache',
+        '--disk-cache-size=0'
     ]
 }
 ```

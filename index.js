@@ -59,6 +59,8 @@ const options = {
     headless: true,
     qrTimeout: 0,
     authTimeout: 0,
+    cachedPatch: true,
+    disableSpins: true,
     restartOnCrash: start,
     cacheEnabled: false,
     executablePath: "/usr/bin/google-chrome-stable",
@@ -72,11 +74,7 @@ const options = {
         '--disable-cache',
         '--disable-application-cache',
         '--disable-offline-load-stale-cache',
-        '--disk-cache-size=0',
-        '--disable-extensions',
-        '--disable-gl-extensions',
-        '--disable-extensions-https-throttling',
-        '--disable-extensions-file-access-check'
+        '--disk-cache-size=0'
     ]
 }
 
