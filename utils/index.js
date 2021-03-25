@@ -1,7 +1,6 @@
 /* eslint-disable no-return-assign */
 const chalk = require('chalk')
 const moment = require('moment-timezone')
-const updateJson = require('update-json-file')
 moment.tz.setDefault('Asia/Jakarta').locale('id')
 
 // Color
@@ -44,12 +43,11 @@ const sleep = async (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-// Message type Log
-const messageLog = (fromMe, type) => updateJson('utils/stat.json', (data) => {
-    (fromMe) ? (data.sent[type]) ? data.sent[type] += 1 : data.sent[type] = 1 : (data.receive[type]) ? data.receive[type] += 1 : data.receive[type] = 1
-    return data
-})
-
+const hilih = (text) => {   // by LoL-Human & HRTZ
+    const R = new RegExp('[AIUEOaiueo]', 'g')
+    text = text.replace(R, 'i')
+    return text
+}
 
 module.exports = {
     msgFilter: {
@@ -64,5 +62,5 @@ module.exports = {
     },
     color,
     sleep,
-    messageLog
+    hilih
 }

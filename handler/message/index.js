@@ -11,7 +11,7 @@ const moment = require('moment-timezone')
 moment.tz.setDefault('Asia/Jakarta').locale('id')
 const { downloader, urlShortener, meme, translate } = require('../../lib')
 const { apijikan } = require('../../lib/functions')
-const { msgFilter, color, processTime, is, sleep } = require('../../utils')
+const { msgFilter, color, processTime, is, sleep, hilih } = require('../../utils')
 const { ytplay, ytdldown } = require('../../utils/ytdownload')
 const { uploadImages } = require('../../utils/fetcher')
 const fs = require('fs-extra')
@@ -124,7 +124,12 @@ module.exports = msgHandler = async (client, message) => {
         if (!isBanned) {
         switch (command) {
         // Fun Menu
-        case 'motivasi': // By beniismael
+        case 'hilih':   // by LoL-Human & HRTZ
+        hilih(args.join(" ")).then((res) => {
+            client.reply(from, res, id)
+        })
+        break
+        case 'motivasi':    // By beniismael
             fetch('https://raw.githubusercontent.com/beniismael/botstyle/main/media/motivasi.txt')
             .then(res => res.text())
             .then(body => {
@@ -136,7 +141,7 @@ module.exports = msgHandler = async (client, message) => {
                 client.reply(from, `Error:\n${err}`, id)
             })
             break
-        case 'truth':
+        case 'truth':   // by beniismael
             fetch('https://raw.githubusercontent.com/AlvioAdjiJanuar/random/main/truth.txt')
             .then(res => res.text()).then(body => {
                 let truthx = body.split('\n')

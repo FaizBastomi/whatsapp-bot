@@ -1,5 +1,5 @@
 const { create, Client } = require('@open-wa/wa-automate')
-const { color, messsageLog } = require('./utils')
+const { color } = require('./utils')
 const figlet = require('figlet')
 const lolcatjs = require('lolcatjs')
 // const msgHandler = require('./handler/message')
@@ -21,9 +21,6 @@ const start = (client = new Client()) => {
     console.log('\n<---------------------------------------------------------------------------->')
     console.log('[DEV]', color('MidnightPerson', 'yellow'))
     console.log('[CLIENT] CLIENT Started!')
-
-    // Message log for analytic
-    client.onAnyMessage((fn) => messsageLog(fn.fromMe, fn.type))
 
     // Force it to keep the current session
     client.onStateChanged((state) => {

@@ -193,5 +193,7 @@ _*${prefix}dadu*_ = Dice Roll
 
 _*${prefix}truth*_ = Truth
 
-_*${prefix}dare*_ = Dare`
+_*${prefix}dare*_ = Dare
+
+_*${prefix}hilih*_ = Hilih text`
 }

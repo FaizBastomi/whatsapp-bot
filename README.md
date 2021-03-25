@@ -1,7 +1,3 @@
-<p align="center">
-<img height="40px;" src="https://img.shields.io/badge/Beta%20Test-✅-blue.svg?style=flat-square"/>
-</p>
-
 <h1 align="center">WhatsApp Bot</h1>
 <p align="center">This project is the modification version of <a href="https://github.com/YogaSakti/imageToSticker" target="_blank">YogaSakti/imageToSticker</a></p>
 <br />
