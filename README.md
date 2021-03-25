@@ -47,7 +47,7 @@ const options = {
     disableSpins: true,
     restartOnCrash: start,
     cacheEnabled: false,
-    executablePath: "/usr/bin/google-chrome-stable",
+    useChrome: true,
     killProcessOnBrowserClose: true,
     throwErrorOnTosBlock: false,
     stickerServerEndpoint: false,
