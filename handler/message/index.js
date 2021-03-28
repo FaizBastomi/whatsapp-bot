@@ -728,7 +728,7 @@ module.exports = msgHandler = async (client, message) => {
                 ranw = getRandom('.mp3')
                 fs1.writeFile(`./temp/${ran}`, mediaData, { encoding: 'base64' }, function (err) {
                     if (err)
-                        return client.reply(from, 'ada yang salah', id) && fs1.unlinkSync(`./temp/${ran}`)
+                        return client.reply(from, 'ada yang salah', id)
                     ffmpeg(`./temp/${ran}`)
                         .inputFormat(ran.split(".")[1])
                         .on('start', function (cmd) {
@@ -742,15 +742,40 @@ module.exports = msgHandler = async (client, message) => {
                             fs1.unlinkSync(`./temp/${ran}`)
                             const base64 = fs1.readFileSync(`./temp/${ranw}`)
                             client.sendFile(from, `data:audio/ogg;base64,${base64.toString('base64')}`, `${rawn}`, '', id)
-                            setTimeout(() => {
-                                fs1.unlinkSync(`./temp/${ranw}`)
-                            }, 60 * 1000)
+                            fs1.unlinkSync(`./temp/${ranw}`)
                         })
                         .addOutputOptions(['-b:a 128K', '-c:a aac', '-ar 44100', '-vn'])
                         .toFormat('mp3')
                         .save(`./temp/${ranw}`)
                 })
             }
+            break
+            case 'toptt':
+                if (isMedia && type === 'audio') {
+                    const mediaData = await decryptMedia(quotedMsg, uaOverride)
+                    ran = getRandom('.mp3')
+                    ranw = getRandom(`.opus`)
+                    fs1.writeFile(`./temp/${ran}`, mediaData, {encoding:'base64'}, function(err) {
+                        if (err) return client.reply(from, 'ada yang salah', id)
+                        ffmpeg(`./temp/${ran}`)
+                        .input(`./temp/${ran}`)
+                        .on('start', function(cmd) {
+                            console.log('Starting: ', + cmd)
+                        })
+                        .on('error', function(err) {
+                            console.log('[FFMPEG]', + err)
+                            fs1.unlinkSync(`./temp/${ran}`)
+                        })
+                        .on('end', function() {
+                            fs1.unlinkSync(`./temp/${ran}`)
+                            client.sendPtt(from, `./temp/${ranw}`, id)
+                            fs1.unlinkSync(`./temp/${ranw}`)
+                        })
+                        .addOutputOptions(['-ar 44100','-c:a libopus','-b:a 128K','-compression_level 10'])
+                        .toFormat('opus')
+                        .save(`./temp/${ranw}`)
+                    })
+                }
             break
         // Weebs Command
 		case 'randomanime':{
