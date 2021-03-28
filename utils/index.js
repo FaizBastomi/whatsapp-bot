@@ -49,6 +49,10 @@ const hilih = (text) => {   // by LoL-Human & HRTZ
     return text
 }
 
+const getRandom = (ext) => {
+    return `${Math.floor(Math.random() * 1000)}.${ext}`
+}
+
 module.exports = {
     msgFilter: {
         isFiltered,
@@ -62,5 +66,6 @@ module.exports = {
     },
     color,
     sleep,
-    hilih
+    hilih,
+    getRandom
 }

@@ -11,12 +11,13 @@ const moment = require('moment-timezone')
 moment.tz.setDefault('Asia/Jakarta').locale('id')
 const { downloader, urlShortener, meme, translate } = require('../../lib')
 const { apijikan } = require('../../lib/functions')
-const { msgFilter, color, processTime, is, sleep, hilih } = require('../../utils')
+const { msgFilter, color, processTime, is, sleep, hilih, getRandom } = require('../../utils')
 const { ytplay, ytdldown } = require('../../utils/ytdownload')
 const { uploadImages } = require('../../utils/fetcher')
 const fs = require('fs-extra')
 const fs1 = require('fs')
 const fetch = require('node-fetch')
+const ffmpeg = require("fluent-ffmpeg")
 const axios = require('axios')
 const mime = require('mime-types')
 const sizeOf = require('image-size')
@@ -718,6 +719,38 @@ module.exports = msgHandler = async (client, message) => {
                 break
         case 'owner':
             await client.sendContact(from, ownerNumber)
+            break
+        case 'tomp3':
+            if (isMedia && type === 'video') {
+                const encryptMedia = isQuotedVideo ? quotedMsg : message
+                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                ran = getRandom('.mp4')
+                ranw = getRandom('.mp3')
+                fs1.writeFile(`./temp/${ran}`, mediaData, { encoding: 'base64' }, function (err) {
+                    if (err)
+                        return client.reply(from, 'ada yang salah', id) && fs1.unlinkSync(`./temp/${ran}`)
+                    ffmpeg(`./temp/${ran}`)
+                        .inputFormat(ran.split(".")[1])
+                        .on('start', function (cmd) {
+                            console.log('Starting: ', +cmd)
+                        })
+                        .on('error', function (err) {
+                            console.log('[FFMPEG]' + err)
+                            fs1.unlinkSync(`./temp/${ran}`)
+                        })
+                        .on('end', function () {
+                            fs1.unlinkSync(`./temp/${ran}`)
+                            const base64 = fs1.readFileSync(`./temp/${ranw}`)
+                            client.sendFile(from, `data:audio/ogg;base64,${base64.toString('base64')}`, `${rawn}`, '', id)
+                            setTimeout(() => {
+                                fs1.unlinkSync(`./temp/${ranw}`)
+                            }, 60 * 1000)
+                        })
+                        .addOutputOptions(['-b:a 128K', '-c:a aac', '-ar 44100', '-vn'])
+                        .toFormat('mp3')
+                        .save(`./temp/${ranw}`)
+                })
+            }
             break
         // Weebs Command
 		case 'randomanime':{
