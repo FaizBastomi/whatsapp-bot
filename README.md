@@ -1,5 +1,5 @@
 <p align="center">
-<img height="40px;" src="https://img.shields.io/badge/Beta%20Test-✅-blue.svg?style=flat-square" alt="Beta Flags" />
+<img height="40px;" src="https://img.shields.io/badge/maintained-idk-red.svg?style=flat-square" alt="Flags" />
 </p>
 
 <h1 align="center">WhatsApp Bot</h1>
